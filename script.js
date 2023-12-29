@@ -30,4 +30,13 @@ function setOption() {
   msg[this.name] = this.value;
 }
 
-options.forEach(option => option.addEventListener('input', setOption
+options.forEach(option => option.addEventListener('input', setOption));
+
+// Speak and Stop functions
+speakButton.addEventListener('click', () => {
+  speechSynthesis.speak(msg);
+});
+
+stopButton.addEventListener('click', () => {
+  speechSynthesis.cancel();
+});
